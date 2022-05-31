@@ -36,8 +36,8 @@ body {
 }
 
 .product_detail_item {
-    font-size: calc(var(--font-size) + 5px);
-    padding: 10px;
+    font-size: calc(var(--font-size));
+    padding: 5px;
     margin-bottom: 10px;
     text-align: left;
 }
@@ -53,7 +53,7 @@ body {
 #product_detail_price {
     display: grid;
     color: sandybrown;
-    font-size: calc(var(--font-size) + 10px);
+    font-size: calc(var(--font-size) + 8px);
     grid-auto-flow: column;
     grid-template-rows: 1fr;
     place-content: center left;
@@ -66,7 +66,7 @@ body {
 
 #radio_group > div{
     display: grid;
-    font-size: calc(var(--font-size) + 5px);
+    font-size: calc(var(--font-size));
     gap: 10px;
     grid-template-columns: 100%;
     place-content: center;
@@ -78,7 +78,7 @@ body {
     border: 3px solid dodgerblue;
     border-radius: 5px;
     color: dodgerblue;
-    font-size: calc(var(--font-size) + 5px);
+    font-size: calc(var(--font-size));
     margin: auto;
     padding: 10px;
     width: max-content;
@@ -94,7 +94,7 @@ body {
     border: 3px solid violet;
     border-radius: 5px;
     color: violet;
-    font-size: calc(var(--font-size) + 5px);
+    font-size: calc(var(--font-size));
     margin: auto;
     padding: 10px;
     width: max-content;

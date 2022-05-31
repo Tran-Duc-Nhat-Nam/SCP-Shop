@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <script src="index.js"></script>
+    <script src="signup.js"></script>
+    <title>SCP Shop - Giỏ hàng</title>
+  </head>
+  <body onload="fade()" id="bd">
+    <div id="top">
+      <div id="header">
+        <div id="brand_logo">
+          <a href="index.html"
+            ><img src="./SCP-Logo.png" alt="Logo" id="logo"
+          /></a>
+          <p id="brand">Sincere, Comfortable, Perfect</p>
+        </div>
+        <div id="search_bar">
+          <input type="text" placeholder="Tìm kiếm..." id="search_area" />
+          <button id="search_button"></button>
+        </div>
+        <div id="b_section">
+          <a href="cart.html" id="cart_button"
+            ><img src="./Cart-Icon.png" id="cart_button_img"
+          /></a>
+          <a href="signup.html" class="pc_button" id="signup_button">ĐĂNG KÝ</a>
+          <a href="signup.html" class="pc_button" id="login_button"
+            >ĐĂNG NHẬP</a
+          >
+        </div>
+      </div>
+      <div id="top_nav">
+        <a href="index.html" class="top_nav_link">Trang chủ</a>
+        <a href="about.html" class="top_nav_link">Giới thiệu</a>
+        <a href="about.html" class="top_nav_link">Khuyến mãi</a>
+        <a href="category.html" class="top_nav_link">Sản phẩm</a>
+        <a href="about.html" class="top_nav_link">Hỗ trợ</a>
+        <a href="about.html" class="top_nav_link">Chính sách</a>
+        <a href="about.html" class="top_nav_link">Tuyển dụng</a>
+      </div>
+    </div>
+    <div onclick="openSubNav(this, 'phone_nav_link')" id="phone_nav">
+      <div id="phone_nav_header">Menu</div>
+      <a href="index.html" class="phone_nav_link">Trang chủ</a>
+      <a href="about.html" class="phone_nav_link">Giới thiệu</a>
+      <a href="category.html" class="phone_nav_link">Sản phẩm</a>
+      <a href="signup.html" class="phone_nav_link">Đăng ký</a>
+    </div>
+    <div id="cart">
+      <div id="cart_list">
+        <div class="cart_item">
+          <a href="product.html"
+            ><img src="./ao-khoac-nu.jpg" alt="" class="cart_item_img"
+          /></a>
+          <div class="cart_item_info">
+            <a href="product.html">
+              <div class="cart_item_name">Áo khoác bé gái</div>
+            </a>
+            <div class="cart_item_detail">
+              <div class="cart_item_color">Màu: đen</div>
+              <div class="cart_item_size">Kích thước: 3Y - 5Y - 25kg</div>
+            </div>
+            <div class="cart_item_price">Giá: 420.000 vnđ</div>
+            <div class="cart_item_amount">Số lượng: 1 cái</div>
+          </div>
+        </div>
+        <div class="cart_item">
+          <a href="product.html">
+            <img src="./ao-thun-spider-man.jpg" alt="" class="cart_item_img" />
+          </a>
+          <div class="cart_item_info">
+            <a href="product.html">
+              <div class="cart_item_name">Áo thun Spider-Man</div>
+            </a>
+            <div class="cart_item_detail">
+              <div class="cart_item_color">Màu: xanh</div>
+              <div class="cart_item_size">Kích thước: 5Y - 7Y - 35kg</div>
+            </div>
+            <div class="cart_item_price">Giá: 300.000 vnđ</div>
+            <div class="cart_item_amount">Số lượng: 1 cái</div>
+          </div>
+        </div>
+        <div class="cart_item">
+          <a href="product.html">
+            <img src="./ao-thun-7-mau.jpg" alt="" class="cart_item_img" />
+          </a>
+          <div class="cart_item_info">
+            <a href="product.html">
+              <div class="cart_item_name">Áo thun 7 sắc cầu vòng</div>
+            </a>
+            <div class="cart_item_detail">
+              <div class="cart_item_color">Màu: Cầu vòng</div>
+              <div class="cart_item_size">Kích thước: 3Y - 5Y - 30kg</div>
+            </div>
+            <div class="cart_item_price">Giá: 200.000 vnđ</div>
+            <div class="cart_item_amount">Số lượng: 1 cái</div>
+          </div>
+        </div>
+      </div>
+      <div id="cart_summary">
+        <div>Tổng số lượng: 3 cái</div>
+        <div>Tổng giá: 920.000 vnđ</div>
+        <button>Thanh toán trực tuyến</button
+        ><button>Thanh toán khi nhận hàng</button>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="footer_item">
+        <div class="footer_item_heading">Nhóm 7</div>
+        <div class="footer_item_text">Thành viên:</div>
+        <div class="footer_item_text">Trần Đức Nhật Nam - MSSV: 2001206925</div>
+        <div class="footer_item_text">Kiều Đạo Nhất San - MSSV: 2001206997</div>
+        <div class="footer_item_text">Thập Anh Hào - MSSV: 2001206982</div>
+      </div>
+      <div class="footer_item">
+        <div class="footer_item_heading">Về SCP Shop</div>
+        <div class="footer_item_text">Giới thiệu về shop</div>
+        <div class="footer_item_text">Chính sách hoạt động</div>
+        <div class="footer_item_text">Tuyển dụng nhân viên</div>
+        <div class="footer_item_text">Chăm sóc khách hàng</div>
+      </div>
+      <div class="footer_item">
+        <div class="footer_item_heading">Liên hệ</div>
+        <div class="footer_item_text">Giới thiệu về shop</div>
+        <div class="footer_item_text">Chính sách hoạt động</div>
+        <div class="footer_item_text">Tuyển dụng nhân viên</div>
+        <div class="footer_item_text">Chăm sóc khách hàng</div>
+      </div>
+      <div class="footer_item">
+        <div class="footer_item_heading">Kết nối với chúng tôi</div>
+        <div id="social_button">
+          <a href="https://www.facebook.com/"
+            ><img src="./Facebook-Icon.png" alt=""
+          /></a>
+          <a href="https://twitter.com/"
+            ><img src="./Twitter-Icon.png" alt=""
+          /></a>
+          <a href="https://www.youtube.com/"
+            ><img src="./Youtube-Icon.png" alt=""
+          /></a>
+          <a href="https://zalo.me/"><img src="./Zalo-Icon.png" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

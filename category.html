@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="category.css" />
+    <script src="index.js" defer></script>
+    <title>SCP Shop - Thời trang bé trai</title>
+  </head>
+  <body onload="fade()" id="bd">
+    <div id="top">
+      <div id="header">
+        <div id="brand_logo">
+          <a href="index.html"
+            ><img src="./SCP-Logo.png" alt="Logo" id="logo"
+          /></a>
+          <p id="brand">Sincere, Comfortable, Perfect</p>
+        </div>
+        <div id="search_bar">
+          <input type="text" placeholder="Tìm kiếm..." id="search_area" />
+          <button id="search_button"></button>
+        </div>
+        <div id="b_section">
+          <a href="cart.html" id="cart_button"
+            ><img src="./Cart-Icon.png" id="cart_button_img"
+          /></a>
+          <a href="signup.html" class="pc_button" id="signup_button">ĐĂNG KÝ</a>
+          <a href="signup.html" class="pc_button" id="login_button"
+            >ĐĂNG NHẬP</a
+          >
+        </div>
+      </div>
+      <div id="top_nav">
+        <a href="index.html" class="top_nav_link">Trang chủ</a>
+        <a href="about.html" class="top_nav_link">Giới thiệu</a>
+        <a href="about.html" class="top_nav_link">Khuyến mãi</a>
+        <a href="#" class="top_nav_link" id="current">Sản phẩm</a>
+        <a href="about.html" class="top_nav_link">Hỗ trợ</a>
+        <a href="about.html" class="top_nav_link">Chính sách</a>
+        <a href="about.html" class="top_nav_link">Tuyển dụng</a>
+      </div>
+    </div>
+    <div onclick="openSubNav(this, 'phone_nav_link')" id="phone_nav">
+      <div id="phone_nav_header">Menu</div>
+      <a href="index.html" class="phone_nav_link">Trang chủ</a>
+      <a href="about.html" class="phone_nav_link">Giới thiệu</a>
+      <a href="category.html" class="phone_nav_link">Sản phẩm</a>
+      <a href="signup.html" class="phone_nav_link">Đăng ký</a>
+    </div>
+    <div id="side_cate">
+      <div id="side_cate_nav">
+        <div class="side_cate_nav_header noselect">Menu</div>
+        <div class="side_cate_nav_item noselect">
+          <div
+            onclick="openSubNav(this.parentElement, 'side_cate_nav_sub_item')"
+            class="side_cate_nav_item_header"
+          >
+            Bộ sưu tập thời trang
+          </div>
+          <a href="product.html" class="side_cate_nav_sub_item">
+            Bộ sưu tập thời trang theo mùa
+          </a>
+          <a href="product.html" class="side_cate_nav_sub_item">
+            Bộ sưu tập thời trang theo vùng
+          </a>
+          <a href="product.html" class="side_cate_nav_sub_item">
+            Bộ sưu tập thời trang từng thời kỳ
+          </a>
+          <a href="product.html" class="side_cate_nav_sub_item">
+            Bộ sưu tập thời trang theo màu
+          </a>
+        </div>
+        <div class="side_cate_nav_item noselect">
+          <div
+            onclick="openSubNav(this.parentElement, 'side_cate_nav_sub_item')"
+            class="side_cate_nav_item_header"
+          >
+            Quần áo bé trai
+          </div>
+          <a href="product.html" class="side_cate_nav_sub_item">Áo sơ-mi</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Áo thun</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Áo khoác</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Áo len</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Quần sooc</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Quần dài</a>
+        </div>
+        <div class="side_cate_nav_item noselect">
+          <div
+            onclick="openSubNav(this.parentElement, 'side_cate_nav_sub_item')"
+            class="side_cate_nav_item_header"
+          >
+            Quần áo bé gái
+          </div>
+          <a href="product.html" class="side_cate_nav_sub_item">Áo đầm</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Áo thun</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Áo khoác</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Áo len</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Quần sooc</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Quần dài</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Chân váy</a>
+        </div>
+        <div class="side_cate_nav_item noselect">
+          <div
+            onclick="openSubNav(this.parentElement, 'side_cate_nav_sub_item')"
+            class="side_cate_nav_item_header"
+          >
+            Quần áo trẻ sơ sinh
+          </div>
+          <a href="product.html" class="side_cate_nav_sub_item">Bộ thun</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Đầm váy</a>
+          <a href="product.html" class="side_cate_nav_sub_item">áo khoác</a>
+        </div>
+        <div class="side_cate_nav_item noselect">
+          <div
+            onclick="openSubNav(this.parentElement, 'side_cate_nav_sub_item')"
+            class="side_cate_nav_item_header"
+          >
+            Phụ kiện
+          </div>
+          <a href="product.html" class="side_cate_nav_sub_item">Nón</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Khẩu trang</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Vòng tay</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Đồng hồ</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Găng tay</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Tất</a>
+          <a href="product.html" class="side_cate_nav_sub_item">Giày</a>
+        </div>
+      </div>
+      <div class="side_cate_option">
+        <div class="side_cate_nav_header noselect">Giá</div>
+        <div class="side_cate_option_item noselect">
+          <input type="radio" name="price" id="" />
+          <label for="html">Dưới 200.000 vnđ</label><br />
+        </div>
+        <div class="side_cate_option_item noselect">
+          <input type="radio" name="price" id="" />
+          <label for="html">Từ 200.000 vnđ - 300.000 vnđ</label><br />
+        </div>
+        <div class="side_cate_option_item noselect">
+          <input type="radio" name="price" id="" />
+          <label for="html">Từ 300.000 vnđ - 500.000 vnđ</label><br />
+        </div>
+        <div class="side_cate_option_item noselect">
+          <input type="radio" name="price" id="" />
+          <label for="html">Từ 500.000 vnđ - 1.000.000 vnđ</label><br />
+        </div>
+        <div class="side_cate_option_item noselect">
+          <input type="radio" name="price" id="" />
+          <label for="html">Trên 1.000.000 vnđ</label><br />
+        </div>
+      </div>
+      <div class="side_cate_option">
+        <div class="side_cate_nav_header noselect">Kích thước</div>
+        <div class="side_cate_option_item noselect">
+          <input type="radio" name="weight" id="" />
+          <label for="html">6M - 9M - 5KG</label><br />
+          <input type="radio" name="weight" id="" />
+          <label for="html">6M - 9M - 10KG</label><br />
+        </div>
+        <div class="side_cate_option_item noselect">
+          <input type="radio" name="weight" id="" />
+          <label for="html">9M - 1Y - 8KG</label><br />
+          <input type="radio" name="weight" id="" />
+          <label for="html">9M - 1Y - 12KG</label><br />
+        </div>
+        <div class="side_cate_option_item noselect">
+          <input type="radio" name="weight" id="" />
+          <label for="html">1Y - 2Y - 12KG</label><br />
+          <input type="radio" name="weight" id="" />
+          <label for="html">1Y - 2Y - 18KG</label><br />
+        </div>
+        <div class="side_cate_option_item noselect">
+          <input type="radio" name="weight" id="" />
+          <label for="html">2Y - 3Y - 15KG</label><br />
+          <input type="radio" name="weight" id="" />
+          <label for="html">2Y - 3Y - 20KG</label><br />
+        </div>
+        <div class="side_cate_option_item noselect">
+          <input type="radio" name="weight" id="" />
+          <label for="html">3Y - 5Y - 25KG</label><br />
+          <input type="radio" name="weight" id="" />
+          <label for="html">3Y - 5Y - 35KG</label><br />
+        </div>
+      </div>
+    </div>
+    <div id="main_cate">
+      <div id="main_cate_header">Quần áo bé trai</div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./ao-thun-be-trai.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Áo thun khủng long cho bé trai</div>
+        <div>120.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./img-9.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Quần áo khủng long bé trai</div>
+        <div>240.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./ao-thun-7-mau.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Áo thun 7 sắc cầu vồng bé trai</div>
+        <div>135.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./ao-thun-la-phong.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Quần áo khủng long bé trai</div>
+        <div>250.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./ao-thun-spider-man.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Quần áo Spider-Man bé trai</div>
+        <div>200.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./img-10.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Quần áo thể thao bé trai</div>
+        <div>240.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./img-1.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Quần áo thể thao bé trai</div>
+        <div>250.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./img-2.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Quần áo Mickey bé trai</div>
+        <div>280.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./img-3.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Quần jean ngắn bé trai</div>
+        <div>168.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./img-4.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Áo thun có cổ bé trai</div>
+        <div>260.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./img-5.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Quần áo thun cá voi bé trai</div>
+        <div>230.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./img-6.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Áo thun Monster Road bé trai</div>
+        <div>160.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./img-7.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Áo thun Road Ride bé trai</div>
+        <div>175.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./img-8.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Áo thun Dinosaur Expert bé trai</div>
+        <div>185.000 vnd</div>
+      </div>
+      <div class="main_cate_item">
+        <a href="product.html"><img src="./quan-sooc-be-trai.jpg" alt="" /></a>
+        <div class="main_cate_item_name">Quần short bé trai</div>
+        <div>125.000 vnd</div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="footer_item">
+        <div class="footer_item_heading">Nhóm 7</div>
+        <div class="footer_item_text">Thành viên:</div>
+        <div class="footer_item_text">Trần Đức Nhật Nam - MSSV: 2001206925</div>
+        <div class="footer_item_text">Kiều Đạo Nhất San - MSSV: 2001206997</div>
+        <div class="footer_item_text">Thập Anh Hào - MSSV: 2001206982</div>
+      </div>
+      <div class="footer_item">
+        <div class="footer_item_heading">Thông tin về SCP Shop</div>
+        <a href="about.html" class="footer_item_text">Giới thiệu</a>
+        <a href="about.html" class="footer_item_text">Điều khoản thành viên</a>
+        <a href="about.html" class="footer_item_text">Chính sách bảo mật</a>
+        <a href="about.html" class="footer_item_text">Danh sách cửa hàng</a>
+      </div>
+      <div class="footer_item">
+        <div class="footer_item_heading">Liên hệ</div>
+        <a href="about.html" class="footer_item_text">Chăm sóc khách hàng</a>
+        <a href="about.html" class="footer_item_text">Hỗ trợ nhân viên</a>
+        <a href="about.html" class="footer_item_text">Tuyển dụng</a>
+        <a href="about.html" class="footer_item_text">Khiếu nại</a>
+      </div>
+      <div class="footer_item">
+        <div class="footer_item_heading">Kết nối với chúng tôi</div>
+        <div id="social_button">
+          <a href="https://www.facebook.com/"
+            ><img src="./Facebook-Icon.png" alt=""
+          /></a>
+          <a href="https://twitter.com/"
+            ><img src="./Twitter-Icon.png" alt=""
+          /></a>
+          <a href="https://www.youtube.com/"
+            ><img src="./Youtube-Icon.png" alt=""
+          /></a>
+          <a href="https://zalo.me/"><img src="./Zalo-Icon.png" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+:root {
+    --bgColor: rgb(255, 255, 255, 0.75);
+}
+
+body {
+    grid-template-areas: 
+    "top top top top" 
+    ". . . ."
+    ". main_panel second_form ."
+    ". . . ."
+    "footer footer footer footer" ;
+    grid-template-columns: 1fr 600px 300px 1fr;
+    grid-template-rows: 100px 1fr max-content 1fr max-content;
+}
+
+form {
+    background-color: var(--bgColor);
+    box-shadow: 1px 1px 5px gray;
+    display: grid;
+    height: max-content;
+    margin: auto;
+    padding: 25px 0px;
+    place-content: start center;
+    width: 100%;
+}
+
+#main_form {
+    grid-area: main_panel;
+    grid-template-areas: 
+    "main_form_header main_form_header"
+    ". ."
+    ". ."
+    ". ."
+    ". ."
+    "policy_checkbox policy_checkbox"
+    "signup_button signup_button";
+    grid-template-columns: 1fr 1fr;
+}
+
+#second_form {
+    grid-area: second_form;
+    grid-template-columns: 1fr;
+}
+
+.second_form_header {
+    font-size: calc(var(--font-size) + 10px);
+    font-weight: bolder;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.main_form_header {
+    font-size: calc(var(--font-size) + 10px);
+    font-weight: bolder;
+    grid-area: main_form_header;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.text_input {
+    background-color: WhiteSmoke;
+    border: 3px solid rgb(255, 255, 255, 0);
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 5px lightgray;
+    color: black;
+    font-size: var(--font-size);
+    height: 40px;
+    margin: 10px auto;
+    opacity: 0.7;
+    text-indent: 10px;
+    transition: opacity 0.35s;
+    width: 80%;
+}
+
+.text_input:hover {
+    opacity: 0.85;
+}
+
+.text_input:focus {
+    border: 3px solid deepskyblue;
+    opacity: 1;
+    outline: none;
+}
+
+#date_input {
+    background-color: WhiteSmoke;
+    border: 3px solid rgb(255, 255, 255, 0);
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 5px lightgray;
+    font-size: var(--font-size);
+    height: 40px;
+    margin: 10px auto;
+    opacity: 0.7;
+    padding: 1px 2px;
+    text-indent: 10px;
+    transition: opacity 0.35s;
+    width: 80%;
+}
+
+#date_input:hover {
+    opacity: 0.85;
+}
+
+#date_input:focus {
+    border: 3px solid deepskyblue;
+    opacity: 1;
+    outline: none;
+    text-indent: 5px;
+}
+
+.checkbox_area {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+    margin: 15px auto;
+    place-content: center;
+    text-align: center;
+}
+
+.checkbox_area > * {
+    margin: auto;
+}
+
+#policy_checkbox_area {
+    grid-area: policy_checkbox;
+}
+
+.button {
+    background-image: linear-gradient(115deg, dodgerblue, fuchsia);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px gray;
+    color: white;
+    display: grid;
+    font-size: var(--font-size);
+    font-weight: bolder;
+    height: 40px;
+    margin: auto;
+    margin-top: 20px;
+    place-content: center;
+    width: 80%;
+}
+
+.button:hover {
+    background-color: steelblue;
+}
+
+.button:active {
+    background-color: midnightblue;
+}
+
+#sup_button {
+    grid-area: signup_button;
+}
+
+#form_text {
+    margin-top: 25px;
+    text-align: center;
+}
+
+#social_button a {
+    margin: auto;
+    width: 35px;
+}
+
+#social_button img {
+    width: 100%;
+}
+
+@media screen and (max-width: 1600px) {
+    body {
+        grid-template-columns: 1fr 750px 350px 1fr;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    body {
+        grid-template-areas: 
+        "top" 
+        "nav"
+        "main_panel"
+        "second_form"
+        "footer" ;
+        grid-template-columns: 100%;
+        grid-template-rows: 60px 50px max-content max-content max-content;
+    }
+
+    #main_form {
+        margin: 25px 0px;
+    }
+
+    #second_form {
+        display: none;
+        margin-bottom: 25px;
+    }
+}

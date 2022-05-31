@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="product.css" />
+    <script src="index.js" defer></script>
+    <title>SCP Shop - Áo thun khủng long cho bé trai</title>
+  </head>
+  <body onload="fade()" id="bd">
+    <div id="top">
+      <div id="header">
+        <div id="brand_logo">
+          <a href="index.html"
+            ><img src="./SCP-Logo.png" alt="Logo" id="logo"
+          /></a>
+          <p id="brand">Sincere, Comfortable, Perfect</p>
+        </div>
+        <div id="search_bar">
+          <input type="text" placeholder="Tìm kiếm..." id="search_area" />
+          <button id="search_button"></button>
+        </div>
+        <div id="b_section">
+          <a href="cart.html" id="cart_button"
+            ><img src="./Cart-Icon.png" id="cart_button_img"
+          /></a>
+          <a href="signup.html" class="pc_button" id="signup_button">ĐĂNG KÝ</a>
+          <a href="signup.html" class="pc_button" id="login_button"
+            >ĐĂNG NHẬP</a
+          >
+        </div>
+      </div>
+      <div id="top_nav">
+        <a href="index.html" class="top_nav_link">Trang chủ</a>
+        <a href="about.html" class="top_nav_link">Giới thiệu</a>
+        <a href="about.html" class="top_nav_link">Khuyến mãi</a>
+        <a href="category.html" class="top_nav_link">Sản phẩm</a>
+        <a href="about.html" class="top_nav_link">Hỗ trợ</a>
+        <a href="about.html" class="top_nav_link">Chính sách</a>
+        <a href="about.html" class="top_nav_link">Tuyển dụng</a>
+      </div>
+    </div>
+    <div onclick="openSubNav(this, 'phone_nav_link')" id="phone_nav">
+      <div id="phone_nav_header">Menu</div>
+      <a href="index.html" class="phone_nav_link">Trang chủ</a>
+      <a href="about.html" class="phone_nav_link">Giới thiệu</a>
+      <a href="category.html" class="phone_nav_link">Sản phẩm</a>
+      <a href="signup.html" class="phone_nav_link">Đăng ký</a>
+    </div>
+    <div id="side_nav">
+      <a href="category.html">Bộ sưu tập thời trang</a>
+      <a href="category.html">Quần áo bé trai</a>
+      <a href="category.html">Quần áo bé gái</a>
+      <a href="category.html">Quần áo trẻ sơ sinh</a>
+      <a href="category.html">Trang sức</a>
+      <a href="category.html">Phụ kiện</a>
+    </div>
+    <div id="product_img"><img src="./ao-thun-la-phong.jpg" alt="" /></div>
+    <div id="product_detail">
+      <div class="product_detail_item" id="product_detail_name">
+        Áo thun khủng long cho bé trai
+      </div>
+      <div class="product_detail_item" id="product_detail_price">
+        Giá: 690.000 vnđ
+      </div>
+      <div class="product_detail_item" id="product_detail_status">
+        Tình trạng hàng hóa: còn hàng
+      </div>
+      <div id="radio_group">
+        <div class="product_detail_item" id="product_detail_size">
+          Kích thước
+          <button
+            onclick="radio(this, '.radio_size', 'checked_radio_size')"
+            class="radio_size checked_radio_size"
+          >
+            2Y - 3Y - 20kq
+          </button>
+          <button
+            onclick="radio(this, '.radio_size', 'checked_radio_size')"
+            class="radio_size"
+          >
+            2Y - 3Y - 20kq
+          </button>
+          <button
+            onclick="radio(this, '.radio_size', 'checked_radio_size')"
+            class="radio_size"
+          >
+            2Y - 3Y - 20kq
+          </button>
+        </div>
+        <div class="product_detail_item" id="product_detail_color">
+          Màu sắc:
+          <button
+            onclick="radio(this, '.radio_color', 'checked_radio_color')"
+            class="radio_color checked_radio_color"
+          >
+            2Y - 3Y - 20kq
+          </button>
+          <button
+            onclick="radio(this, '.radio_color', 'checked_radio_color')"
+            class="radio_color"
+          >
+            2Y - 3Y - 20kq
+          </button>
+          <button
+            onclick="radio(this, '.radio_color', 'checked_radio_color')"
+            class="radio_color"
+          >
+            2Y - 3Y - 20kq
+          </button>
+        </div>
+      </div>
+      <div class="product_detail_item" id="cart_item_amount">
+        <div id="cart_item_amount_label">Số lượng:</div>
+        <button onclick="adjustNumber('cart_item_amount_input', -1)">-</button>
+        <input type="number" value="1" id="cart_item_amount_input" />
+        <button onclick="adjustNumber('cart_item_amount_input', 1)">+</button>
+      </div>
+      <a href="cart.html" class="button" id="product_detail_buy">Mua ngay</a>
+      <button
+        onclick="notify('Thêm vào giỏ hàng thành công')"
+        class="button"
+        id="product_detail_cart"
+      >
+        Thêm vào giỏ hàng
+      </button>
+    </div>
+    <div id="footer">
+      <div class="footer_item">
+        <div class="footer_item_heading">Nhóm 7</div>
+        <div class="footer_item_text">Thành viên:</div>
+        <div class="footer_item_text">Trần Đức Nhật Nam - MSSV: 2001206925</div>
+        <div class="footer_item_text">Kiều Đạo Nhất San - MSSV: 2001206997</div>
+        <div class="footer_item_text">Thập Anh Hào - MSSV: 2001206982</div>
+      </div>
+      <div class="footer_item">
+        <div class="footer_item_heading">Về SCP Shop</div>
+        <div class="footer_item_text">Giới thiệu về shop</div>
+        <div class="footer_item_text">Chính sách hoạt động</div>
+        <div class="footer_item_text">Tuyển dụng nhân viên</div>
+        <div class="footer_item_text">Chăm sóc khách hàng</div>
+      </div>
+      <div class="footer_item">
+        <div class="footer_item_heading">Liên hệ</div>
+        <div class="footer_item_text">Giới thiệu về shop</div>
+        <div class="footer_item_text">Chính sách hoạt động</div>
+        <div class="footer_item_text">Tuyển dụng nhân viên</div>
+        <div class="footer_item_text">Chăm sóc khách hàng</div>
+      </div>
+      <div class="footer_item">
+        <div class="footer_item_heading">Kết nối với chúng tôi</div>
+        <div id="social_button">
+          <a href="https://www.facebook.com/"
+            ><img src="./Facebook-Icon.png" alt=""
+          /></a>
+          <a href="https://twitter.com/"
+            ><img src="./Twitter-Icon.png" alt=""
+          /></a>
+          <a href="https://www.youtube.com/"
+            ><img src="./Youtube-Icon.png" alt=""
+          /></a>
+          <a href="https://zalo.me/"><img src="./Zalo-Icon.png" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

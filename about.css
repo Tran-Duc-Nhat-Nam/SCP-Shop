@@ -16,7 +16,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 65px 1fr 50px;
     height: max-content;
-    min-height: 68vh;
+    min-height: 70vh;
     padding: 15px;
     place-content: start center;
 }

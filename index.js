@@ -41,11 +41,6 @@ function moveBanner(number, button) {
   button.style.opacity = 1;
 }
 
-function fade() {
-  let e = document.getElementById('bd')
-  e.style.opacity = 1;
-}
-
 function openSubNav(obj, child_class) {
   console.log(window.getComputedStyle(obj).getPropertyValue('background-color'))
   if (window.getComputedStyle(obj).getPropertyValue('background-color') != 'rgba(0, 0, 0, 0)')

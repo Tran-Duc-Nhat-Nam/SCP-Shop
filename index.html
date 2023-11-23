@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <title>SCP Shop - Shop thời trang trẻ em</title>
   </head>
   <body id="bd">
@@ -131,7 +132,12 @@
         </div>
       </div>
     </div>
-
+    <df-messenger
+      intent="WELCOME"
+      chat-title="CuaHangPhanMem"
+      agent-id="bfab8ef0-ee56-40e5-a540-c2c6c750cdcf"
+      language-code="vi"
+    ></df-messenger>
     <div id="footer">
       <div class="footer_item">
         <div class="footer_item_heading">Nhóm 7</div>
